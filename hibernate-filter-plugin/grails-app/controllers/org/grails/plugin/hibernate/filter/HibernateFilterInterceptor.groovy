@@ -1,8 +1,10 @@
 package org.grails.plugin.hibernate.filter
 
+import grails.transaction.Transactional
 import groovy.transform.CompileStatic
 import org.hibernate.SessionFactory
 
+@Transactional
 @CompileStatic
 class HibernateFilterInterceptor {
 

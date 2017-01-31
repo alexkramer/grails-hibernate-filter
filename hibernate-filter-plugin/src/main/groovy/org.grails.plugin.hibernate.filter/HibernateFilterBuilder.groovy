@@ -66,6 +66,8 @@ class HibernateFilterBuilder {
 			mappings.addFilterDefinition new FilterDefinition(name, condition, paramsMap)
 		}
 
+
+
 		// If this is a collection, add the filter to the collection,
 		// else add the condition to the base class
 		def entity = options.collection ?
@@ -90,7 +92,12 @@ class HibernateFilterBuilder {
 		}
 
 		// now add the filter to the class or collection
-		entity.addFilter(name, condition, true, [:], [:])
+		if(options.joinTable && options.collection) {
+			entity.addManyToManyFilter(name, condition, true, [:], [:])
+		}
+		else {
+			entity.addFilter(name, condition, true, [:], [:])
+		}
 
 		// TODO: may be able to refactor this so that the factory creates the
 		// session with the filters rather than enabling them on each request
