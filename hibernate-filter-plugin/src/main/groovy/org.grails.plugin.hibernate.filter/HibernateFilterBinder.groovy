@@ -1,5 +1,6 @@
 package org.grails.plugin.hibernate.filter
 
+import groovy.transform.CompileStatic
 import org.hibernate.boot.spi.InFlightMetadataCollector
 import org.hibernate.boot.spi.MetadataContributor
 import org.jboss.jandex.IndexView
@@ -7,6 +8,7 @@ import org.jboss.jandex.IndexView
 /**
  * Created by akramer on 12/6/16.
  */
+@CompileStatic
 class HibernateFilterBinder implements MetadataContributor {
 
     /**
