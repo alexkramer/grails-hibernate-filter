@@ -1,5 +1,8 @@
 grails-hibernate-filter
 =======================
+# DEPRECATION AND MOVE
+This repo is now in public archive, continued development as been moved to the Grail Plugin Collective. You can
+find the new home for the plugin [HERE](https://github.com/gpc/grails-hibernate-filter)
 
 # Description
 This is a fork of the original [Grails Hibernate Filter Plugin](http://grails.org/plugin/hibernate-filter) 
